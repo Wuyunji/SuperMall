@@ -1,7 +1,8 @@
 import axios from 'axios'
+import { localBaseUrl } from './urls'
 
 export function register(userId, password, re_password) {
-  return axios.post('http://192.168.1.199:8000/register', {
+  return axios.post(`http://${localBaseUrl}/register`, {
     userId,
     password,
     re_password
