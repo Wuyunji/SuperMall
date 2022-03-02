@@ -1,0 +1,8 @@
+.check-button {
+  border-radius: 50%;
+  border: 2px solid #aaa;
+}
+.check {
+  background-color: red;
+  color: red;
+}

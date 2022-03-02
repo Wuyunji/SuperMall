@@ -1,0 +1,35 @@
+#detail{
+  height: 100vh;
+  position: relative;
+}
+
+.detail-navbar {
+  position: fixed;
+  top: 0;
+
+  display: block;
+  width: 100%;
+
+  z-index: 9;
+  background-color: #fff;
+}
+
+.detail-swiper{
+  margin-top: 44px;
+}
+
+.home-tab-control{
+  height: 44px;
+  width: 100%;
+  z-index: 9;
+}
+
+#detail .content{
+  position: absolute;
+  top: 44px;
+  bottom: 49px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+

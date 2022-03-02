@@ -1,0 +1,52 @@
+.profile-order{
+  width: 340px;
+  position: absolute;
+  left: 50%;
+  margin-left: -170px;
+  top: 220px;
+}
+
+.profile-order-header{
+  display: flex;
+  padding: 10px 0;
+}
+
+.profile-order-header .my-order{
+  flex: 1;
+  font-size: 16px;
+  font-weight: 700;
+}
+.profile-order-header .my-order::before{
+  content:'';
+  background-color: var(--color-tint);
+  border-radius: 5px;
+  padding-right: 5px;
+  margin-right: 10px;
+}
+
+.profile-order-header .view-all{
+  flex: 1;
+  text-align: right;
+  font-size: 14px;
+  color: #999;
+}
+
+.profile-order-details{
+  background-color: #f1f1f1;
+  display: flex;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.profile-order-item{
+  flex: 1;
+  margin: 10px;
+}
+
+.profile-order-details img{
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-left: 18px;
+}
+

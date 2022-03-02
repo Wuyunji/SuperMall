@@ -1,0 +1,15 @@
+.refresh{
+  position: fixed;
+
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
+  text-align: center;
+  line-height: 40px;
+  z-index: 999;
+}
+
+.refresh-btn{
+  font-size: 14px;
+}

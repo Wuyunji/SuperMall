@@ -1,0 +1,13 @@
+.title{
+  display: flex;
+}
+
+.detail-item{
+  flex: 1;
+  font-size: 14px;
+  color:#666;
+}
+
+.active{
+  color: var(--color-high-text);
+}

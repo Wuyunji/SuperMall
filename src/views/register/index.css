@@ -1,0 +1,116 @@
+#register{
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-tint);
+  position: relative;
+}
+
+.register-tips-box{
+  height: 30px;
+  width: 100%;
+  line-height: 30px;
+  color: #fff;
+}
+
+.register-tips{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.register-box{
+  width: 300px;
+  height: 320px;
+  background-color: var(--color-background);
+  opacity: 0.9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -150px;
+  border-radius: 5px;
+}
+
+.register-avatar{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+.register-avatar img{
+  width: 100px;
+  height: 100px;
+}
+
+.register-title{
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  top: 60px;
+  margin-left: -100px;
+  text-align: center;
+}
+
+.register-form{
+  width: 260px;
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  margin-left: -130px;
+}
+
+.register-form span img{
+  position:absolute;
+  right: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.register-userid, .register-password{
+  position: relative;
+  width: 260px;
+  height: 30px;
+  margin-top: 10px;
+  background-color: var(--color-tint);
+  border-radius: 5px;
+  line-height: 30px;
+}
+
+.register-userid input, .register-password input{
+  background-color: rgba(0,0,0,0);
+  height: 30px;
+  line-height: 30px;
+  outline: none;
+  border: none;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.register-button{
+  width: 260px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  margin-left: -130px;
+  margin-top: 10px;
+  background-color: var(--color-tint);
+  border-radius: 10px;
+}
+
+.register-login{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -50px;
+  border-radius: 10px;
+}
+
+.register-login button{
+  width: 100px;
+  height: 30px;
+  background-color: var(--color-tint);
+}
+

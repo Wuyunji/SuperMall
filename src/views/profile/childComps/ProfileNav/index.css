@@ -1,0 +1,17 @@
+.profile-nav{
+  background-color: var(--color-tint);
+  color: #fff;
+  font-weight: 700;
+}
+
+.profile-right{
+  position: relative;
+}
+
+.profile-right img{
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+}
