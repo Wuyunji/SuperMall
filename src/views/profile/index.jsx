@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import Toast from '../../components/common/Toast'
 import ProfileNav from './childComps/ProfileNav'
 import ProfileInfo from './childComps/ProfileInfo'
@@ -8,14 +7,14 @@ import ProfileTools from './childComps/ProfileTools'
 import { getData } from '../../network/profile'
 import './index.css'
 
-function Profile() {
+function Profile(props) {
   // console.log('Profile');
   const [data, setData] = useState({})
-  const navigate = useNavigate()
+  const replace = props.history?.replace
 
   useEffect(() => {
     getData().then((res)=>{
-      console.log(res);
+      console.log(res,'profile');
       if(res.data.status==='false'){        //登录失败
         const errMsg = res.data.errMsg
         if(errMsg.loginErr){
@@ -23,16 +22,16 @@ function Profile() {
         }else{
           Toast.info('未知的出错')
         }
-        navigate('/login',{replace:true})
+        replace('/login')
       }else{                                //登录成功
         setData(res.data)
       }
     },(err)=>{
       console.log(err);
       Toast.info('网络不稳定,请稍后重试')
-      // navigate('/login',{replace:true})  //上线使用
+      replace('/login')  //上线使用
     })
-  })
+  },[replace])
   
   return (
     <div id='profile'>

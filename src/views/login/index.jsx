@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import avatar from '../../assets/img/profile/avatar.svg'
 import user from '../../assets/img/profile/user.webp'
 import password from '../../assets/img/profile/password.webp'
@@ -10,7 +9,6 @@ import './index.css'
 
 export default function Login() {
   // console.log('Login');
-  const navigate = useNavigate()
   function submitForm() {
     let userId = document.getElementsByTagName('input')[0].value
     let password = document.getElementsByTagName('input')[1].value
@@ -33,7 +31,7 @@ export default function Login() {
       } else {
         // 登录成功后跳转到profile
         Toast.info('已成功登录')
-        navigate('/profile',{replace:true})
+        window.location.replace('/profile')
       }
     }, (err) => {
       console.log(err);
@@ -44,7 +42,7 @@ export default function Login() {
 
   // 点击注册按钮跳转到注册界面
   function routeToRegister() {
-    navigate('/register',{replace:true})
+    window.location.replace('/register')
   }
 
   return (

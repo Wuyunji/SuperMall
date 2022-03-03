@@ -30,7 +30,7 @@ function TabBarItem(props) {
   }, [isActive])// eslint-disable-line
 
   return (
-    <NavLink className="link" to={path} replace='true'>
+    <NavLink className="link" to={path}>
       <div className="tab-bar-item">
         {isActive ? Icon_active : Icon}
         <div style={activeStyle}>{Text}</div>

@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import avatar from '../../assets/img/profile/avatar.svg'
 import user from '../../assets/img/profile/user.webp'
 import password from '../../assets/img/profile/password.webp'
@@ -10,7 +9,6 @@ import './index.css'
 
 export default function Register() {
   // console.log('Register');
-  const navigate = useNavigate()
   function submitForm() {
     let userId = document.getElementsByTagName('input')[0].value
     let password = document.getElementsByTagName('input')[1].value
@@ -47,7 +45,7 @@ export default function Register() {
   }
 
   function routeToLogin() {
-    navigate('/login',{replace:true})
+    window.location.replace('/login')
   }
 
   return (

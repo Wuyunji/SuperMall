@@ -1,15 +1,14 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { withRouter } from 'react-router-dom'
 import './index.css'
 
 function GoodsListItem(props) {
-  const { imgLoad } = props
+  const { imgLoad, history } = props
   const { title, price, cfav, iid } = props.item
   const img = props.item.image || props.item.show.img
-  const navigate = useNavigate()
-
+  // const navigate = useNavigate()
   function handleClick() {
-    navigate(`/detail/${iid}`, { replace: true })
+   history.push('/detail/' + iid)
   }
   return (
     <div className="goods-item" onClick={handleClick}>
@@ -23,4 +22,4 @@ function GoodsListItem(props) {
   )
 }
 
-export default GoodsListItem
+export default withRouter(GoodsListItem)

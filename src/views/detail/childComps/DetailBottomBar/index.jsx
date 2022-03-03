@@ -1,28 +1,31 @@
-import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { addToCollect } from '../../../../redux/actions/addToCollect_action';
+import React, { useEffect } from 'react'
 import Toast from '../../../../components/common/Toast';
+import { 
+  // connect, 
+  useSelector, 
+  useDispatch 
+} from 'react-redux';
+import { addToCollect } from '../../../../redux/actions/addToCollect_action';
 import './index.css'
 
 function DetailBottomBar(props) {
   // console.log('DetailBottomBar');
-  const { id, addCart } = props
-  const [isCollect, setIsCollect] = useState(false)
-  const [collectClassName, setCollectClassName] = useState('icon select')
-  const collect = useSelector(state => state.addToCollect)
+  const { 
+    addCart, 
+    id, 
+    // collect 
+  } = props
+
+  const collect = useSelector(state=>state.addToCollect)
   const dispatch = useDispatch()
-  const navigate = useNavigate() // eslint-disable-line
+
 
   useEffect(() => {
-    if (collect.has(id)) {
-      setIsCollect(true)
-      setCollectClassName('icon select active')
-    } else {
-      setIsCollect(false)
-      setCollectClassName('icon select')
-    }
-  }, [collect, id])
+    let div = document.getElementsByClassName('select')[0]
+    let span = document.getElementsByClassName('select')[1]
+    div.className = collect.has(id) ? 'icon select active' : 'icon select'
+    span.innerHTML = collect.has(id) ? '已收藏' : '收藏'
+  })
 
   function serviceClick() {
     Toast.info('暂未开通客服功能')
@@ -36,12 +39,13 @@ function DetailBottomBar(props) {
     /**
      * 如果还没登录则必须要先登录后才能收藏
      */
-    // if (document.cookie) {     //测试
-    collect.has(id) ? Toast.info('已取消收藏') : Toast.info('已收藏')
-    dispatch(addToCollect(id))
-    // } else {
-    //   navigate('/login',{replace:true})  //上线
-    // }
+    if (document.cookie) {     //测试
+      collect.has(id) ? Toast.info('已取消收藏') : Toast.info('已收藏')
+      // props.addToCollect(id)
+      dispatch(addToCollect(id))
+    } else {
+      window.location.replace('/login')  //上线
+    }
   }
 
   function addClick() {
@@ -51,8 +55,8 @@ function DetailBottomBar(props) {
     if (document.cookie) {
       addCart()
     } else {
-      addCart()   //测试
-      // navigate('/login',{replace:true})  //上线
+      // addCart()   //测试
+      window.location.replace('/login')  //上线
     }
   }
 
@@ -72,8 +76,8 @@ function DetailBottomBar(props) {
           <span className="text" onClick={shopClick}>店铺</span>
         </div>
         <div>
-          <i className={collectClassName}></i>
-          <span className="text" onClick={collectClick}>{isCollect ? '已收藏' : '收藏'}</span>
+          <i className="icon select"></i>
+          <span className="text select" onClick={collectClick}>收藏</span>
         </div>
       </div>
       <div className="bar-item bar-right">
@@ -83,5 +87,10 @@ function DetailBottomBar(props) {
     </div>
   )
 }
+
+// export default connect(
+//   state => ({ collect: state.addToCollect }),
+//   { addToCollect }
+// )(DetailBottomBar)
 
 export default DetailBottomBar

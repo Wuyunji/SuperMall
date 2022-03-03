@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { NavLink, useLocation, useParams } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { NavLink } from 'react-router-dom'
+import { 
+  // connect,
+  useDispatch
+} from 'react-redux'
 import PubSub from 'pubsub-js'
-import { addToCart } from '../../redux/actions/addToCart_action'
 import './index.css'
 import {
   getDetailData,
@@ -23,12 +25,14 @@ import GoodsList from '../../components/content/GoodsList'
 import BackToTop from '../../components/common/BackToTop'
 import Toast from '../../components/common/Toast'
 import Refresh from '../../components/common/Refresh'
+import { addToCart } from '../../redux/actions/addToCart_action'
 
-function Detail() {
+function Detail(props) {
   // console.log('Detail');
-  const { iid } = useParams()
-  const location = useLocation()
-  const pathname = location.pathname
+
+  const { location: { pathname }, match: { params: { iid } } } = props
+
+  const dispatch = useDispatch()
 
   const title = ['商品', '参数', '评论', '推荐']
   const [id, setId] = useState()
@@ -43,7 +47,6 @@ function Detail() {
   const commentRef = useRef()
   const paramRef = useRef()
   const goodsRef = useRef()
-  const dispatch = useDispatch()
 
   useEffect(() => {
     document.getElementsByTagName('html')[0].scrollTop = 0
@@ -109,6 +112,7 @@ function Detail() {
     product.realPrice = goods.realPrice
     Toast.info('已加入购物车')
     //添加进购物车
+    // props.addToCart(product)
     dispatch(addToCart(product))
   }
 
@@ -126,7 +130,7 @@ function Detail() {
 
   return (
     <div id="detail">
-      <NavLink className="link" to={pathname} replace='true'>
+      <NavLink className="link" to={pathname}>
         <div className='detail-navbar'><DetailNavBar title={title} /></div>
         <div className='detail-swiper'><DetailSwiper banners={banners} /></div>
         <div className='detail-baseinfo'><DetailBaseInfo goods={goods} /></div>
@@ -135,12 +139,20 @@ function Detail() {
         <div className='detail-goodsparam' ref={paramRef}><DetailGoodsParam goodsParam={goodsParam} /></div>
         <div className='detail-comentinfo' ref={commentRef} ><DetailCommentInfo commentInfo={commentInfo} /></div>
         <div className='detail-goodslist' ref={goodsRef}><GoodsList goods={recommend} /></div>
-        <div className='detail-bottombar'><DetailBottomBar addCart={addCart} id={id} /></div>
+        <div className='detail-bottombar'><DetailBottomBar addCart={addCart} id={id}/></div>
         <div className='detail-backtotop'><BackToTop position={{ right: '10px', bottom: '60px' }} /></div>
         <div className='detail-refresh'><Refresh position={{ top: '2px', right: '2px' }} /></div>
       </NavLink>
     </div>
   )
 }
+
+// export default connect(
+//   state => ({ cartList: state.cartList }),
+//   { 
+//     addToCart,
+//     addToCollect
+//   }
+// )(Detail)
 
 export default Detail
