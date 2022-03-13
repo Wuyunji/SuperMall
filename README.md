@@ -1,4 +1,4 @@
-# First
+﻿# First
 ### you need to run server.js in SuperMall-Server
 
 # Second
@@ -8,9 +8,9 @@
 ### you should open /src/network/urls.js and change the address of the localhost
 
 # Finally 
-### Getting Started with `npm start` and open [http://xxx.xxx.xxx.xxx:3000](http://xxx.xxx.xxx.xxx:3000) to view it in your browser.(NOT http://localhost:3000)
+### Getting Started with `yarn start` and open [http://xxx.xxx.xxx.xxx:3000](http://xxx.xxx.xxx.xxx:3000) to view it in your browser.(NOT http://localhost:3000)
 
-## Make sure you put it in mobile mode!!!
+## Make sure you put it in mobile mode !!! (iPhone 6/7/8)
 
 项目描述：
 	该项目是基于React hooks+redux+react-router开发的移动端SPA单页面应用。前端通过axios请求特定接口来获取数据，使用react-router来实现不同页面间的切换，并使用redux实现了购物车、点击收藏等功能。后端通过node.js+express+MongoDB实现了简单的登录注册功能并通过session进行身份验证。
@@ -27,7 +27,7 @@
 	在我的页面中，展示了登录后的个人信息。展示了在详情页点击收藏的总个数。
 
 4.详情页：
-	详情页展示了商品的图片、描述、参数、买家评论、以及相关商品推荐。实现了回到顶部、刷新、回到首页的功能。实现了点击顶部导航栏跳转到对应内容、滑动至某内容导航高亮。实现了点击收藏、取消收藏。实现了添加至购物车的功能，如果未登录还会跳转到登录页面。
+	详情页展示了商品的图片、描述、参数、买家评论、以及相关商品推荐。实现了回到顶部、刷新、回到首页的功能。实现了点击顶部导航栏跳转到对应内容、滑动至某内容导航高亮。实现了点击收藏、取消收藏。实现了添加至购物车的功能，在未登录的情况下，点击收藏或点击添加至购物车会跳转到登录页面。
 
 5.登录：
 	通过axios发送请求验证账号密码，如果输入不正确会有相应提示。
