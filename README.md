@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ﻿# First
-=======
- # First
->>>>>>> 3fbabe1ee04513669e84afcfb9c85a642e5adf98
 ### you need to run server.js in SuperMall-Server
 
 # Second
@@ -33,14 +29,8 @@
 4.详情页：
 	详情页展示了商品的图片、描述、参数、买家评论、以及相关商品推荐。实现了回到顶部、刷新、回到首页的功能。实现了点击顶部导航栏跳转到对应内容、滑动至某内容导航高亮。实现了点击收藏、取消收藏。实现了添加至购物车的功能，在未登录的情况下，点击收藏或点击添加至购物车会跳转到登录页面。
 
-<<<<<<< HEAD
 5.登录：
 	通过axios发送请求验证账号密码，如果输入不正确会有相应提示。
-=======
-### `npm start`
-Runs the app in the development mode.
-### important: you must Open [http://xxx.xxx.xxx.xxx:3000](http://xxx.xxx.xxx.xxx:3000) to view it in your browser.(NOT http://localhost:3000)
->>>>>>> 3fbabe1ee04513669e84afcfb9c85a642e5adf98
 
 6.注册：
   通过axios发送请求验证账号密码，如果输入不正确会有相应提示。
