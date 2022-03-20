@@ -14,7 +14,7 @@ function Profile(props) {
 
   useEffect(() => {
     getData().then((res)=>{
-      console.log(res,'profile');
+      console.log('profile-->', res);
       if(res.data.status==='false'){        //登录失败
         const errMsg = res.data.errMsg
         if(errMsg.loginErr){

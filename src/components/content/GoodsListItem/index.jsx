@@ -8,7 +8,7 @@ function GoodsListItem(props) {
   const img = props.item.image || props.item.show.img
   // const navigate = useNavigate()
   function handleClick() {
-   history.push('/detail/' + iid)
+   history.replace('/detail/' + iid)
   }
   return (
     <div className="goods-item" onClick={handleClick}>

@@ -72,14 +72,14 @@ export default function Register() {
           <div className="register-password">
             <form onSubmit={() => { this.preventDefault() }}>
               <input type="password" placeholder="Password" autoComplete="true" />
+              <span><img src={password} alt="password" /></span>
             </form>
-            <span><img src={password} alt="password" /></span>
           </div>
           <div className="register-password">
             <form onSubmit={() => { this.preventDefault() }}>
               <input type="password" placeholder="rePassword" autoComplete="true" />
+              <span><img src={password} alt="password" /></span>
             </form>
-            <span><img src={password} alt="password" /></span>
           </div>
           <button className="register-button" onClick={trottle(submitForm, 2000)}>Register</button>
         </div>

@@ -67,10 +67,10 @@ export default function Login() {
             <span><img src={user} alt="user" /></span>
           </div>
           <div className="login-password">
-            <form onSubmit={()=>{this.preventDefault()}}>
+            <form onSubmit={() => { this.preventDefault() }}>
               <input type="password" placeholder="Password" autoComplete="true" />
+              <span><img src={password} alt="password" /></span>
             </form>
-            <span><img src={password} alt="password" /></span>
           </div>
           <input type="button" className="login-button" value="LOGIN" onClick={trottle(submitForm, 2000)} />
         </div>
