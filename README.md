@@ -2,14 +2,13 @@
 ### you need to use `npm install` to install modules listed in package.json
 
 # Second
-### you should open `./src/network/urls.js` and change the address of the localhost
+### Getting Started with `yarn start` and open [http://localhost:3000] to view it in your browser.
 
-# Finally 
-### Getting Started with `yarn start` and open (http://xxx.xxx.xxx.xxx:3000) to view it in your browser.(NOT http://localhost:3000) !!!
+# Finally
+### jest wait a while
 
 # Attention
 ## Make sure './server.js/' has run in SuperMall-Server
-## Make sure you open (http://xxx.xxx.xxx.xxx:3000)
 ## Make sure you put it in mobile mode !!! suggest(iPhone 6/7/8)
 ## The project may start slowly (please wait a while~~~)
 
