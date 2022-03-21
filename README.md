@@ -1,16 +1,17 @@
 ﻿# First
-### you need to run server.js in SuperMall-Server
-
-# Second
 ### you need to use `npm install` to install modules listed in package.json
 
-# Then
-### you should open /src/network/urls.js and change the address of the localhost
+# Second
+### you should open `./src/network/urls.js` and change the address of the localhost
 
 # Finally 
-### Getting Started with `yarn start` and open [http://xxx.xxx.xxx.xxx:3000](http://xxx.xxx.xxx.xxx:3000) to view it in your browser.(NOT http://localhost:3000)
+### Getting Started with `yarn start` and open (http://xxx.xxx.xxx.xxx:3000) to view it in your browser.(NOT http://localhost:3000) !!!
 
-## Make sure you put it in mobile mode !!! (iPhone 6/7/8)
+# Attention
+## Make sure './server.js/' has run in SuperMall-Server
+## Make sure you open (http://xxx.xxx.xxx.xxx:3000)
+## Make sure you put it in mobile mode !!! suggest(iPhone 6/7/8)
+## The project may start slowly (please wait a while~~~)
 
 项目描述：
 	该项目是基于React hooks+redux+react-router开发的移动端SPA单页面应用。前端通过axios请求特定接口来获取数据，使用react-router来实现不同页面间的切换，并使用redux实现了购物车、点击收藏等功能。后端通过node.js+express+MongoDB实现了简单的登录注册功能并通过session进行身份验证。
