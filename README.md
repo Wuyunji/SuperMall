@@ -1,11 +1,11 @@
 ﻿# First
-### you need to use `npm install` to install modules listed in package.json
+### You need to use `npm install` to install modules listed in package.json
 
 # Second
 ### Getting Started with `yarn start` and open [http://localhost:3000] to view it in your browser.
 
 # Finally
-### jest wait a while
+### Just wait a while ~~~
 
 # Attention
 ## Make sure './server.js/' has run in SuperMall-Server
