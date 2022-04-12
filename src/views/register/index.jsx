@@ -33,7 +33,7 @@ export default function Register() {
         }
       } else {
         Toast.info('已成功注册! 跳转中...')
-        // 登录成功后4s跳转到login
+        // 登录成功后3s跳转到login
         setTimeout(() => {
           routeToLogin()
         }, 3000);

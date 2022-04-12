@@ -1,7 +1,8 @@
 import React, {
   useState,
   useEffect,
-  memo
+  memo,
+  Fragment
 } from 'react'
 import {
   Route,
@@ -35,7 +36,7 @@ function App(props) {
     }
   }, [pathname])
   return (
-    <div>
+    <Fragment>
       <CacheSwitch>
         <CacheRoute path="/home" component={Home}></CacheRoute>
         <CacheRoute path="/category" component={Category}></CacheRoute>
@@ -47,7 +48,7 @@ function App(props) {
         <Redirect to="/home"></Redirect>
       </CacheSwitch>
       <div style={{ display: (isShowTab ? 'block' : 'none') }}><MainTabBar /></div>
-    </div>
+    </Fragment>
   )
 }
 
