@@ -7,7 +7,7 @@
 # Finally
 ### Just wait a while ~~~
 
-# Attention
+# Attention!!!
 ## Make sure './server.js/' has run in SuperMall-Server
 ## Make sure you put it in mobile mode !!! suggest(iPhone 6/7/8)
 ## The project may start slowly (please wait a while~~~)

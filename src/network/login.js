@@ -1,11 +1,16 @@
-import axios from "axios";
+import { request } from './request'
 import { localBaseUrl } from './urls'
 
 export function verify(userId, password) {
-  return axios.post(`http://${localBaseUrl}/login`, {
-    userId,
-    password
-  }, {
+  return request({
+    baseURL: localBaseUrl,
+    url: '/login',
+    method: 'post',
+    data: {
+      userId,
+      password
+    },
     withCredentials: true // 设置axios允许携带cookie
   })
+
 }

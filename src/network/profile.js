@@ -1,8 +1,10 @@
-import axios from "axios";
+import { request } from './request'
 import { localBaseUrl } from './urls'
 
 export function getData() {
-  return axios.get(`http://${localBaseUrl}/profile`,{
-    withCredentials:true // 设置axios允许携带cookie
+  return request({
+    baseURL: localBaseUrl,
+    url: '/profile',
+    withCredentials: true // 设置axios允许携带cookie
   })
 }

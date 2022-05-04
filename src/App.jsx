@@ -27,6 +27,7 @@ function App(props) {
   // console.log('App');
   const pathname = props.location.pathname
   const [isShowTab, setIsShowTab] = useState(true)
+
   useEffect(() => {
     const pathArr = ['/home', '/category', '/cart', '/profile', '/login', '/register']
     if (pathArr.includes(pathname)) {
@@ -35,6 +36,7 @@ function App(props) {
       setIsShowTab(false)
     }
   }, [pathname])
+
   return (
     <Fragment>
       <CacheSwitch>

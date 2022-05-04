@@ -1,3 +1,3 @@
 const localhost = 'localhost'
 const port = '8000'
-export const localBaseUrl = `${localhost}:${port}`
+export const localBaseUrl = `http://${localhost}:${port}`
